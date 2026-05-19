@@ -1,6 +1,6 @@
 Name:           wayland-utils
-Version:        1.2.0
-Release:        6%{?dist}
+Version:        1.3.0
+Release:        1%{?dist}
 Summary:        Wayland utilities
 
 License:        MIT
@@ -10,7 +10,7 @@ Source0:        https://wayland.freedesktop.org/releases/%{name}-%{version}.tar.
 BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  pkgconfig(wayland-client) >= 1.20
-BuildRequires:  pkgconfig(wayland-protocols) >= 1.24
+BuildRequires:  pkgconfig(wayland-protocols) >= 1.44
 BuildRequires:  pkgconfig(wayland-scanner)
 BuildRequires:  pkgconfig(libdrm) >= 2.4.109
 
@@ -39,6 +39,10 @@ XDG output protocols.
 %{_mandir}/man1/wayland-info.1*
 
 %changelog
+* Tue Nov 25 2025 Olivier Fourdan <ofourdan@redhat.com> - 1.3.0-1
+- wayland-utils 1.3.0
+  Resolves: RHEL-130858
+
 * Tue Oct 29 2024 Troy Dawson <tdawson@redhat.com> - 1.2.0-6
 - Bump release for October 2024 mass rebuild:
   Resolves: RHEL-64018
